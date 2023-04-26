@@ -9,7 +9,7 @@
 
 package chap_04;
 
-public class _12_Quiz_04 {
+public class _Quiz {
 	public static void main(String[] args) {
 		int hour = 10; // 10시간 주차
 		boolean isSmallCar = false; // 경차
