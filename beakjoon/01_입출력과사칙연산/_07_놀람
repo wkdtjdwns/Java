@@ -1,0 +1,15 @@
+package _01_입출력과사칙연산;
+
+// 입력		출력
+// joonas	joonas??!
+
+import java.util.Scanner;
+
+public class _07_놀람 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String name = in.next();
+		System.out.println(name + "??!");
+		in.close();
+	}
+}
