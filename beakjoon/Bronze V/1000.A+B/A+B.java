@@ -1,10 +1,7 @@
-package Bronze V;
-
-
 // Scanner 의 첫 단어는 대문자로 써준다.
 import java.util.Scanner;
 
-public class _01_A더하기B {
+public class Main {
 	public static void main(String[] args) {
 		
 		// Scanner 객체명 = new Scanner(System.in);
@@ -19,8 +16,8 @@ public class _01_A더하기B {
 		
 		// String 입력 방법
 		
-//		in.next() => 문자열 입력시 공백 전 까지만 받음
-//		in.nextLine() => 문자열 입력시 Enter 입력 전까지만 받음
+		// in.next() => 문자열 입력시 공백 전 까지만 받음
+		// in.nextLine() => 문자열 입력시 Enter 입력 전까지만 받음
 		// 대부분 문제에서는 행 단위로 입력받는 일이 다수이니 문자열 입력 형태로는 in.nextLine() 을 쓴다.
 		
 		// 숫자형 즉, int형을 입력하기 때문에 next"Int"()를 사용함
