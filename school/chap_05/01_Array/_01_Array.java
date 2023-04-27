@@ -41,10 +41,10 @@ public class _01_Array
 		String coffeeChandler = "라떼";
 		String coffeeMonica = "카푸치노";
 		
-		System.out.println(coffeeRose + "하나");
-		System.out.println(coffeeRachel + "하나");
-		System.out.println(coffeeChandler + "하나");
-		System.out.println(coffeeMonica + "하나");
+		System.out.println(coffeeRose + " 하나");
+		System.out.println(coffeeRachel + " 하나");
+		System.out.println(coffeeChandler + " 하나");
+		System.out.println(coffeeMonica + " 하나");
 		System.out.println("주세요!");
 		
 		위처럼 긴 코드를 배열로 쉽게 처리할 수 있다
@@ -78,14 +78,14 @@ public class _01_Array
 		// 출력하기
 		
 		// 배열이름[인덱스 값]
-		System.out.println(coffees[0]);
-		System.out.println(coffees[1]);
+		System.out.println(coffees[0] + " 하나");
+		System.out.println(coffees[1] + " 하나");
 		
 		// 라떼 -> 에스프레소
 		coffees[2] = "에스프레소";
 		
-		System.out.println(coffees[2]);
-		System.out.println(coffees[3]);
+		System.out.println(coffees[2] + " 하나");
+		System.out.println(coffees[3] + " 하나");
 		System.out.println("주세요!");
 		
 		// 배열 선언 및 할당시 주의점!
