@@ -1,10 +1,10 @@
-package _01_입출력과사칙연산;
+package Bronze V;
 
 
 // Scanner 의 첫 단어는 대문자로 써준다.
 import java.util.Scanner;
 
-public class _02_A더하기B {
+public class _01_A더하기B {
 	public static void main(String[] args) {
 		
 		// Scanner 객체명 = new Scanner(System.in);
