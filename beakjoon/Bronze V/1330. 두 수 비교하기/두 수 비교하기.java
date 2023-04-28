@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-class _01_두수비교하기 {
+class Main {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int A, B;
