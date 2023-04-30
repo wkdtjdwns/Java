@@ -1,7 +1,7 @@
 // Scanner 의 첫 단어는 대문자로 써준다.
 import java.util.Scanner;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
 		
 	// Scanner 객체명 = new Scanner(System.in);
