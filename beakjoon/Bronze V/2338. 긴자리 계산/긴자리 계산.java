@@ -6,7 +6,7 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     BigInteger a = sc.nextBigInteger();
     BigInteger b = sc.nextBigInteger();
-    sc.close()
+    sc.close();
     System.out.println(a.add(b)); // 더하기
     System.out.println(a.subtract(b)); // 빼기
     System.out.println(a.multiply(b)); // 곱하기
