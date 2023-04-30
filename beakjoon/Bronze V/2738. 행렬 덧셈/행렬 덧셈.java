@@ -15,8 +15,8 @@ public class Main {
             {
             	// 순서대로 배열 a에 입력받음
                 a[i][j] = sc.nextInt();
-	    }
-	}
+            }
+        }	
         for(int i=0; i<n; i++) 
         {
             for(int j=0; j<m; j++) 
@@ -27,6 +27,6 @@ public class Main {
             }
             System.out.println("");
         }
-	sc.close()
+        sc.close();
     }
 }
