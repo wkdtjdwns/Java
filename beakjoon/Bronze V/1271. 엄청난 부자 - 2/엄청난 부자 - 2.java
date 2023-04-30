@@ -16,11 +16,11 @@ public class Main
 	
 	BigInteger n = sc.nextBigInteger();
 	BigInteger m = sc.nextBigInteger();
-	sc.close()
+	sc.close();
+	    
 	// BigInteger 계산법
         // 문자열 형태로 이루어져 있기에 사칙연산이 안됨
         // 따라서 BigInteger의 값을 계산을 하려면 클래스 내부의 함수를 이용해야 함
-	
 	System.out.println(n.divide(m)); // 나누기
 	System.out.println(n.remainder(m)); // 나머지
     }
