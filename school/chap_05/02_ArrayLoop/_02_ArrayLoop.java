@@ -4,7 +4,7 @@ public class _02_ArrayLoop
 {
 	public static void main(String[] args) 
 	{
-		// 반복문과 배열
+		// 배열순회 - 순차적으로 배열의 값을 모두 돌아봄
 		
 		String[] coffees = {"아메리카노", "카페모카", "라떼", "카푸치노"};
 		
