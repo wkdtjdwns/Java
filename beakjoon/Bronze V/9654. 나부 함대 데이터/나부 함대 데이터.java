@@ -6,6 +6,6 @@ public class Main {
         System.out.println("J-Type 327     Light Combat   Unlimited  1         ");
         System.out.println("NX Cruiser     Medium Fighter Limited    18        ");
         System.out.println("N1 Starfighter Medium Fighter Unlimited  25        ");
-        System.out.println("Royal Cruiser  Light Combat   Limited    4         ");
+        System.out.print("Royal Cruiser  Light Combat   Limited    4         ");
     }
 }
