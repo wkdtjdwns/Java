@@ -1,14 +1,6 @@
-package _01_입출력과사칙연산;
 
-/*
-*  |\_/|
-*  |q p|   /}
-*  ( 0 )"""\
-*  |"^"`    |
-*  ||_/=\\__|
-*/
-
-public class _13_개 {
+public class Main {
+	
 	public static void main(String[] args) {
 		System.out.println("|\\_/|");
 		System.out.println("|q p|   /}");
