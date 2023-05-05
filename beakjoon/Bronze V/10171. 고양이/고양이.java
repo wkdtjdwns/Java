@@ -1,16 +1,5 @@
-package _01_입출력과사칙연산;
+public class Main {
 
-/*	출력
- * 
- *\     /\
- * )   ( ')
- * (  /  )
- *  \(__)|
- * 
- * 
- */
-
-public class _12_고양이 {
 	public static void main(String[] args) {
 		System.out.println("\\    /\\");
 		System.out.println(" )  ( ')");
