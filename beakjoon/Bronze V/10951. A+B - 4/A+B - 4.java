@@ -8,7 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		String str;
-		while( (str=br.readLine()) != null ) // 입력이 없지 않을 때까지 반복
+		while ( (str=br.readLine()) != null ) // 입력이 없지 않을 때까지 반복
 		{ 
 			// charAt() 은 해당 문자의 아스키코드 값을 반환하기 때문에 정수 형태로 변경하려면 반드시 -48 또는 -'0'을 해주어야 함
 			int a = str.charAt(0) - 48; 
