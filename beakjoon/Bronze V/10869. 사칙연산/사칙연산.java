@@ -4,12 +4,11 @@ package _01_입출력과사칙연산;
 import java.util.Scanner;
 
 public class _06_사칙연산 {
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int A, B;
-		A = in.nextInt();
-		B = in.nextInt();
-		in.close();
+		A = Integer.parseInt(br.readLine());
+		B = Integer.parseInt(br.readLine());
 		System.out.println(A + B);
 		System.out.println(A - B);
 		System.out.println(A * B);
