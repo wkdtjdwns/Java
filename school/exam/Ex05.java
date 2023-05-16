@@ -15,6 +15,7 @@ public class Ex05 {
 		int end = sc.nextInt();
 		System.out.print("증가값 : ");
 		int num = sc.nextInt();
+		sc.close();
 		
 		int sum = 0;
 		
