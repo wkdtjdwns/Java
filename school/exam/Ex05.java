@@ -10,7 +10,7 @@ public class Ex05 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("시작값 : ");
-		int start = sc.nextInt();
+		int start = sc.nextInt(); // 입력 받는 방법 (int형)
 		System.out.print("종료값 : ");
 		int end = sc.nextInt();
 		System.out.print("증가값 : ");
