@@ -11,6 +11,7 @@ public class Ex08 {
 		Scanner sc = new Scanner(System.in);
 		
 		int num = sc.nextInt();
+		sc.close();
 		int cnt = 0;
 		
 		for (int i=1; i<= num; i++) {
