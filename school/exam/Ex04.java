@@ -25,7 +25,7 @@ public class Ex04 {
 		System.out.println("몸무게를 입력하세요.");
 		double weight = sc.nextDouble();
 		
-		sc.close();
+		sc.close();                          // Scanner를 사용할 때는 다 쓰고나서 닫아 줘야 함
 		
 		double bmi = height / (height * weight);
 		
