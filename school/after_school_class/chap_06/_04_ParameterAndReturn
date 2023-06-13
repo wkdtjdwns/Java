@@ -2,7 +2,7 @@ package chap_06;
 
 public class _04_ParameterAndReturn {
 
-	// 메소드 이름을 지을 때 get을 사용함 (이 메소드를 실행하면 어떠한 값을 얻는다는 의미)
+	// 메소드 이름을 지을 때 보통 get을 사용함 (이 메소드를 실행하면 어떠한 값을 얻는다는 의미)
 	public static int getPower(int num) // num -> Parameter 또는 매개변수라고 부름
 	{
 		// 전달 받은 값의 제곱 구하기
