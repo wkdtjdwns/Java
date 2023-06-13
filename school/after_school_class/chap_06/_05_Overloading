@@ -19,7 +19,7 @@ public class _05_Overloading {
 //		return result;
 //	}
 	
-	// int 형의 num 파라미터와 달리 String 형의 strNum(num도 가능) 파라미터로 정의 했기 때문에 메소드 오버로딩이 가능함
+	// int 형의 num 파라미터와 달리 String 형의 strNum 파라미터로 정의 했기 때문에 메소드 오버로딩이 가능함
 	public static int getPower(String strNum)
 	{
 		int num = Integer.parseInt(strNum);
