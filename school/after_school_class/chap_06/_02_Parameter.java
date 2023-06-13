@@ -4,7 +4,7 @@ public class _02_Parameter {
 	
 	// 전달값이 있는 메소드 (power는 원래 있는 메소드지만 구현하는 것임 / 전달 받은 값의 제곱을 구해줌)
 	
-	// 전달값 정하는 법 -> 메소드 이름(변수형 변수명)
+	// 전달값 정하는 법 -> 메소드 이름(데이터타입 변수명)
 	public static void power(int num) // num -> Parameter 또는 매개변수라고 부름
 	{
 		// 전달 받은 값의 제곱 구하기
