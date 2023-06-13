@@ -11,7 +11,7 @@ public class _05_Overloading {
 		return result;
 	}
 	
-	// 파라미터 변수의 이름과는 관계없이 이름 및 파라미터의 타입, 갯수가 메소드 오버로딩이 불가능함
+	// 파라미터 변수의 이름과는 관계없이 이름 및 파라미터의 데이터타입, 갯수가 같으면 메소드 오버로딩이 불가능함
 //	public static int getPower(int num1)
 //	{
 //		int result = num * num;
