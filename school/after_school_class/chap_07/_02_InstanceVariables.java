@@ -40,5 +40,12 @@ public class _02_InstanceVariables {
 		System.out.println(b2.resolution);
 		System.out.println(b2.price);
 		System.out.println(b2.color);
+
+		// 문자열 또한 클래스로 이루어져 있음
+		String str = "자바"; // 평소에 사용하는 형태
+			
+		// 원래 사용해야 하는 형태
+		String str2 = new String();
+		str2 = "파이썬";
 	}
 }
