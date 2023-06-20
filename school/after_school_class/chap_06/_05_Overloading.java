@@ -63,7 +63,7 @@ public class _05_Overloading {
 		System.out.println(getPower(4, 3));
 
 		// println()도 오버로딩의 예 라고 볼수 있음 (파라미터의 데이터타입이 다름)
-		// 모두 다 똑같이 println()이라는 이름의 메소드이지만 정상적으로 출력 됨
+		// 모두 다 똑같이 println()이라는 이름의 메소드이지만 정상적으로 출력됨
 		System.out.println(1);    // Int (Short / Long) 형
 		System.out.println('a');  // Char 형
 		System.out.println("AB"); // String 형
