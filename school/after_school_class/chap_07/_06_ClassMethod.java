@@ -24,7 +24,7 @@ public class _06_ClassMethod {
 		bbox.insertMemoryCard(512);
 
 		
-		// 아무 숫자 : 모든 영상 / 1 : 일반 영상 / 2 :ㅣ 이벤트 영상
+		// 아무 숫자 : 모든 영상 / 1 : 일반 영상 / 2 : 이벤트 영상
 		int fileCount = bbox.getVideoFileCount(0);
 		System.out.println(fileCount);
 		
