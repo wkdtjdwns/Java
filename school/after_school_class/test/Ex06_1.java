@@ -15,7 +15,6 @@ public class Ex06_1 {
 	// 팩토리얼 계산기 메소드
 	public static int factorial(int num)
 	{
-		
 		if (num == 1)
 			return 1;
 		
