@@ -30,6 +30,20 @@ public class Ex04 {
 			sum += i;
 			cnt++;
 		}
+
+//		for (int i=1; ; i++)
+//		{
+//			if (i%2 != 0)
+//			{
+//				sum += i;
+//				cnt++;
+//			}
+//			
+//			if (sum > n)
+//			{
+//				break;
+//			}
+//		}
 		
 		System.out.printf("%d, %d", cnt, sum);
 	}
