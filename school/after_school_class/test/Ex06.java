@@ -24,7 +24,7 @@ public class Ex06 {
 		System.out.printf("%d! = %d", num, fac);
 		
 		/* while문
-	    Scanner sc = new Scanner(System.in);
+	   	Scanner sc = new Scanner(System.in);
 		
 		int num = sc.nextInt();
 		sc.close();
