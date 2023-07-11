@@ -21,7 +21,7 @@ public class Ex05 {
 		
 		int cnt = 0;
 		
-    // while문
+    		// while문
 		while (true) 
 		{
 			int answer = sc.nextInt();
