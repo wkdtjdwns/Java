@@ -21,6 +21,12 @@ public class Ex06_1 {
 		// 자기 자신을 불러옴 -> 재귀 함수
 		return num * factorial(num-1);
 		
+//		5! = 5 * 4 * 3 * 2 * 1
+//		4! = 4 * 3 * 2 * 1
+//		3! = 3 * 2 * 1
+//		2! = 2 * 1
+//		1! = 1
+		
 //		factorial(5)
 //		-> 5 * factorial(4)
 //		-> 5 * 4 * factorial(3)
