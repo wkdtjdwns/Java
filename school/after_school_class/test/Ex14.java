@@ -21,6 +21,7 @@ public class Ex14 {
 		
 		int rows = sc.nextInt();
 		int cols = sc.nextInt();
+		sc.close();
 		
 		int[] seats = new int[rows*cols];
 		
@@ -50,6 +51,6 @@ public class Ex14 {
 			}
 		}
 		
-//		System.out.printf("%d번의 중복이 있었습니다.", cnt);
+		System.out.printf("%d번의 중복이 있었습니다.", cnt);
 	}
 }
