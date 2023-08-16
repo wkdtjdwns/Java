@@ -11,7 +11,7 @@ public class Person {
 	
 	// 사람이 은행에 가입할 때마다 이 클래스를 복제해서 사람의 정보를 저장함
 	
-	// 필드 (접근 제한자명이 없으면 default로 설정됨)
+	// 필드 (접근 제한자명이 없으면 default로 설정됨 - default는 같은 패키지 내에서 접근이 가능함)
 	String name;    // 이름
 	int age;        // 나이
 	int cashAmount; // 현금보유량
