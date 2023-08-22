@@ -18,4 +18,34 @@ public class Person {
 	
 	// 계좌 -> 계좌를 구성하기 위해선 BankAccount 클래스에 있는 필드값이 필요함
 	BankAccount account; // 계좌 정보 (account -> BankAccount 클래스에 있는 잔액의 정보를 가짐)
+	
+	// 이체 (파라미터 : 이체할 금액 -> 정수 = int, 이체할 대상 -> Person) - transfer
+	// 리턴 : 이체성공여부 (불리언)
+	boolean transfer(int amount, Person to)
+	{
+		if (amount < 0 || account.balance < amount) // 이체하는 돈이 음수 || 이체하는 돈이 현재 통장 잔고보다 큼 -> 출금 실패 (리턴 : false)
+		{
+			System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체 실패하였습니다. 통장 잔고 : " + account.balance + "원, 현금 : " + cashAmount);
+			
+			return false;
+		}
+		
+		// 나의 현금 -> -
+		account.balance -= amount;
+		
+		// 이체 대상의 통장 잔액 -> +
+		to.account.balance += amount;
+		
+		System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + account.balance + "원, 현금 : " + cashAmount);
+		
+		return true;
+	}
+	
+	// 이체2 (파라미터 : 이체할 금액 -> 정수 = int, 이체할 대상 -> BankAccount) - transfer
+	// 리턴 : 이체성공여부 (불리언)
+	boolean transfer(int amount, BankAccount to)
+	{	
+		// 위와 같이 코드를 계속 써내려가는 것 보다는 위에서 정의한 메소드를 재활용 하는 것이 좋음 (오버로딩의 사용 이유)
+		return transfer(amount, to.owner);
+	}
 }
