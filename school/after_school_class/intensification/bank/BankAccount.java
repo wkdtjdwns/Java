@@ -18,9 +18,9 @@ public class BankAccount {
 	{
 		// 만약 나에게 5만원이 있는데 10만원을 입급할 수 없고 -10만원을 입금할 수도 없음 -> 예외처리하기 (if)
 		
-		if (amount < 0 || owner.cashAmount < amount) // 입금하는 돈이 음수 || 입금하는 돈이 현금보다 큼 -> 입금 실패 (리턴 : false)
+		if (amount < 0 || owner.getCashAmount() < amount) // 입금하는 돈이 음수 || 입금하는 돈이 현금보다 큼 -> 입금 실패 (리턴 : false)
 		{
-			System.out.println(amount + "원 입금 실패입니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+			System.out.println(amount + "원 입금 실패입니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 			
 			return false;
 		}
@@ -30,9 +30,9 @@ public class BankAccount {
 		balance += amount;
 		
 		// 현재 잔고 -> -
-		owner.cashAmount -= amount;
+		owner.setCashAmount(owner.getCashAmount() - amount); 
 		
-		System.out.println(amount + "원 입금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+		System.out.println(amount + "원 입금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 		
 		return true;
 	}
@@ -45,19 +45,19 @@ public class BankAccount {
 		
 		if (amount < 0 || balance < amount) // 출금하는 돈이 음수 || 출금하는 돈이 현재 통장 잔고보다 큼 -> 출금 실패 (리턴 : false)
 		{
-			System.out.println(amount + "원 출금 실패입니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+			System.out.println(amount + "원 출금 실패입니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 			
 			return false;
 		}
 		
 		// 위에 있는 if 문을 통과했으면 출금이 되도록 함
 		// 통장 잔액 -> -
-		owner.cashAmount += amount;
+		owner.setCashAmount(owner.getCashAmount() + amount); 
 		
 		// 현재 잔고 -> +
 		balance -= amount;
 		
-		System.out.println(amount + "원 출금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+		System.out.println(amount + "원 출금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 		
 		return true;
 	}
@@ -68,7 +68,7 @@ public class BankAccount {
 	{
 		if (amount < 0 || balance < amount) // 이체하는 돈이 음수 || 이체하는 돈이 현재 통장 잔고보다 큼 -> 출금 실패 (리턴 : false)
 		{
-			System.out.println(owner.name + "님이 " + to.name + "님에게 " + amount + "원 이체 실패하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+			System.out.println(owner.getName() + "님이 " + to.getName() + "님에게 " + amount + "원 이체 실패하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 			
 			return false;
 		}
@@ -77,9 +77,9 @@ public class BankAccount {
 		balance -= amount;
 		
 		// 이체 대상의 통장 잔액 -> +
-		to.account.balance += amount;
+		to.getBankAccount().balance += amount;
 		
-		System.out.println(owner.name + "님이 " + to.name + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.cashAmount);
+		System.out.println(owner.getName() + "님이 " + to.getName() + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 		
 		return true;
 	}
