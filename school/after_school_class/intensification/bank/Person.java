@@ -12,12 +12,75 @@ public class Person {
 	// 사람이 은행에 가입할 때마다 이 클래스를 복제해서 사람의 정보를 저장함
 	
 	// 필드 (접근 제한자명이 없으면 default로 설정됨 - default는 같은 패키지 내에서 접근이 가능함)
-	String name;    // 이름
-	int age;        // 나이
-	int cashAmount; // 현금보유량
+	private String name;    // 이름
+	private int age;        // 나이
+	private int cashAmount; // 현금보유량
 	
 	// 계좌 -> 계좌를 구성하기 위해선 BankAccount 클래스에 있는 필드값이 필요함
-	BankAccount account; // 계좌 정보 (account -> BankAccount 클래스에 있는 잔액의 정보를 가짐)
+	private BankAccount account; // 계좌 정보 (account -> BankAccount 클래스에 있는 잔액의 정보를 가짐)
+	
+	// 접근제어자가 private인 변수를 다른 클래스에서 사용할 수 있도록 public 메서드를 하나 만듬
+	public void setName(String newName)
+	{
+		name = newName;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setCashAmount(int newCashAmount)
+	{
+		if (newCashAmount > 0)
+		{
+			cashAmount = newCashAmount;
+		}
+		
+		else
+		{
+			System.out.println("올바른 나이를 입력하세요.");
+		}
+	}
+	
+	public int getCashAmount()
+	{
+		return cashAmount;
+	}
+	
+	public void setAge(int newAge) // 파라미터로 나이를 받아와서 계산함
+	{
+		if (newAge > 0) // 파라미터로 올바른 나이를 받아왔다면
+		{
+			// 해당 클래스의 private의 age라는 변수 값을 받아온 나이로 만들어서 저장시켜줌
+			age = newAge;
+		}
+		
+		else
+		{
+			System.out.println("올바른 나이를 입력하세요.");
+		}
+	}
+	
+	// 나이를 얻기 위한 메소드
+	public int getAge()
+	{
+		// 위에 있는 메소드로 정해놓은 나이를 리턴시킴
+		return age;
+	}
+	
+	public void setBankAccount(BankAccount newBankAccount)
+	{
+		account = newBankAccount;
+	}
+	
+	// 나이를 얻기 위한 메소드
+	public BankAccount getBankAccount()
+	{
+		// 위에 있는 메소드로 정해놓은 나이를 리턴시킴
+		return account;
+	}
+	
 	
 	// 이체 (파라미터 : 이체할 금액 -> 정수 = int, 이체할 대상 -> Person) - transfer
 	// 리턴 : 이체성공여부 (불리언)
