@@ -6,10 +6,39 @@ public class BankAccount {
 	// 계좌 소유인, 계좌에 남아있는 잔액
 	
 	// 필드 (접근 제한자명이 없으면 default로 설정됨)
-	int balance; // 잔액
+	private int balance; // 잔액
 	
 	// 소유인 -> 소유인을 구성하기 위해선 Person 클래스에 있는 필드값이 필요함
-	Person owner; // 소유인 (owner -> Person 클래스에 있는 이름, 나이, 현금보유량의 정보를 가짐)
+	private Person owner; // 소유인 (owner -> Person 클래스에 있는 이름, 나이, 현금보유량의 정보를 가짐)
+	
+	public void setBalance(int newBalance)
+	{
+		if (newBalance > 0)
+		{
+			balance = newBalance;
+		}
+		
+		else
+		{
+			System.out.println("올바른 수량을 입력하세요.");
+		}
+	}
+	
+	public int getBalance()
+	{
+		return balance;
+	}
+	
+	public void setOwner(Person newOwner)
+	{
+		owner = newOwner;
+	}
+	
+	public Person getOwner()
+	{
+		return owner;
+	}
+	
 	
 	// 메소드 (입/출금 및 이체)
 	// 입급 (파라미터 : 입급할 금액 -> 정수 = int) - deposit
@@ -35,6 +64,36 @@ public class BankAccount {
 		System.out.println(amount + "원 입금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 		
 		return true;
+	}
+	
+	// 입급 (파라미터 : 입금할 금액 -> 소수 = double, 환율 = double) - depositWithExchangeRate
+	// 리턴 : 입급성공여부 (불리언)
+//	boolean depositWithExchangeRate(double amount, double exchangeRate)
+//	{
+//		// 만약 나에게 5만원이 있는데 10만원을 입급할 수 없고 -10만원을 입금할 수도 없음 -> 예외처리하기 (if)
+//		
+//		if (amount*exchangeRate < 0 || owner.getCashAmount() < amount*exchangeRate) // 입금하는 돈이 음수 || 입금하는 돈이 현금보다 큼 -> 입금 실패 (리턴 : false)
+//		{
+//			System.out.println(amount*exchangeRate + "달러 입금 실패입니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
+//			
+//			return false;
+//		}
+//		
+//		// 위에 있는 if 문을 통과했으면 입금이 되도록 함
+//		// 통장 잔액 -> +
+//		balance += amount*exchangeRate;
+//		
+//		// 현재 잔고 -> -
+//		owner.setCashAmount((int)(owner.getCashAmount() - amount*exchangeRate)); 
+//		
+//		System.out.println(amount*exchangeRate + "달러 입금하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
+//		
+//		return true;
+//	}
+
+	boolean depositWithExchangeRate(double amount, double exchangeRate)
+	{
+		return deposit((int)(amount*exchangeRate));
 	}
 	
 	// 출금 (파라미터 : 출금할 금액 -> 정수 = int) - withdraw
