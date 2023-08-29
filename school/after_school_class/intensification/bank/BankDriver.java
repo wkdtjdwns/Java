@@ -29,13 +29,13 @@ public class BankDriver {
 		
 		// 계좌 만들기 (인스턴스화)
 		BankAccount a1 = new BankAccount();
-		a1.balance = 100000;
+		a1.setBalance(100000);
 		
 //		System.out.println(a1.balance);
 		
 		// ★두 객체의 관계 설정 (상호작용)★
 		p1.setBankAccount(a1);
-		a1.owner = p1;
+		a1.setOwner(p1);
 		
 		// 테스트 (ooo님의 계좌 잔액은 ooo원 입니다.)
 //		System.out.println(p1.name + "님의 계좌 잔액은 " + p1.account.balance + "원 입니다.");
@@ -49,7 +49,7 @@ public class BankDriver {
 
 		System.out.println();
 		p1.setCashAmount(30000);
-		a1.balance = 100000;
+		a1.setBalance(100000);
 		
 		// 출금 메소드 테스트 (1만 5천원 출금하기, 9만원 출금하기 및 -2만원 출금하기)
 		a1.withdraw(15000);
@@ -58,7 +58,7 @@ public class BankDriver {
 
 		System.out.println();
 		p1.setCashAmount(30000);
-		a1.balance = 100000;
+		a1.setBalance(100000);
 		
 		// 이체 메소드 테스트 (1만 5천원 이체하기, 9만원 이체하기 및 -2만원 이체하기)
 		
@@ -72,45 +72,45 @@ public class BankDriver {
 		
 		// a2 객체 생성
 		BankAccount a2 = new BankAccount();
-		a2.balance = 50000;
+		a2.setBalance(50000);
 		
 		// 두 객체 상호작용
 		p2.setBankAccount(a2);
-		a2.owner = p2;
+		a2.setOwner(p2);
 
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().balance + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(15000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().balance + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(90000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().balance + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(-20000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().balance + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
 		
 		System.out.println();
 		p1.setCashAmount(30000);
-		a1.balance = 100000;
+		a1.setBalance(100000);
 
 		// 이체2 메소드 테스트 (1만 5천원 이체하기, 9만원 이체하기 및 -2만원 이체하기)
-		System.out.println(a2.owner.getName() + "통장의 계좌 잔액은 " + a2.balance + "원 입니다.");
+		System.out.println(a2.getOwner().getName() + "통장의 계좌 잔액은 " + a2.getBalance() + "원 입니다.");
 		
 		a1.transfer(15000, a2);
-		System.out.println(a2.owner.getName() + "통장의 계좌 잔액은 " + a2.balance + "원 입니다.");
+		System.out.println(a2.getOwner().getName() + "통장의 계좌 잔액은 " + a2.getBalance() + "원 입니다.");
 		
 		a1.transfer(90000, a2);
-		System.out.println(a2.owner.getName() + "통장의 계좌 잔액은 " + a2.balance + "원 입니다.");
+		System.out.println(a2.getOwner().getName() + "통장의 계좌 잔액은 " + a2.getBalance() + "원 입니다.");
 		
 		a1.transfer(-20000, a2);
-		System.out.println(a2.owner.getName() + "통장의 계좌 잔액은 " + a2.balance + "원 입니다.");
+		System.out.println(a2.getOwner().getName() + "통장의 계좌 잔액은 " + a2.getBalance() + "원 입니다.");
 		
 		// 이체 3 메소드 테스트
 		p1.transfer(20000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().balance + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
 		
 		// 이체 4 메소드 테스트
 		p2.transfer(20000, a1);
-		System.out.println(a1.owner.getName() + "통장의 계좌 잔액은 " + a1.balance + "원 입니다.");
+		System.out.println(a1.getOwner().getName() + "통장의 계좌 잔액은 " + a1.getBalance() + "원 입니다.");
 	}
 }
