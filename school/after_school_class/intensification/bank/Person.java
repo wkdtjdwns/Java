@@ -39,7 +39,7 @@ public class Person {
 		
 		else
 		{
-			System.out.println("올바른 나이를 입력하세요.");
+			System.out.println("올바른 수량를 입력하세요.");
 		}
 	}
 	
@@ -86,20 +86,20 @@ public class Person {
 	// 리턴 : 이체성공여부 (불리언)
 	boolean transfer(int amount, Person to)
 	{
-		if (amount < 0 || account.balance < amount) // 이체하는 돈이 음수 || 이체하는 돈이 현재 통장 잔고보다 큼 -> 출금 실패 (리턴 : false)
+		if (amount < 0 || account.getBalance() < amount) // 이체하는 돈이 음수 || 이체하는 돈이 현재 통장 잔고보다 큼 -> 출금 실패 (리턴 : false)
 		{
-			System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체 실패하였습니다. 통장 잔고 : " + account.balance + "원, 현금 : " + cashAmount);
+			System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체 실패하였습니다. 통장 잔고 : " + account.getBalance() + "원, 현금 : " + cashAmount);
 			
 			return false;
 		}
 		
 		// 나의 현금 -> -
-		account.balance -= amount;
+		account.setBalance(account.getBalance() - amount);
 		
 		// 이체 대상의 통장 잔액 -> +
-		to.account.balance += amount;
+		to.account.setBalance(to.account.getBalance() + amount);
 		
-		System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + account.balance + "원, 현금 : " + cashAmount);
+		System.out.println(name + "님이 " + to.name + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + account.getBalance() + "원, 현금 : " + cashAmount);
 		
 		return true;
 	}
@@ -109,6 +109,6 @@ public class Person {
 	boolean transfer(int amount, BankAccount to)
 	{	
 		// 위와 같이 코드를 계속 써내려가는 것 보다는 위에서 정의한 메소드를 재활용 하는 것이 좋음 (오버로딩의 사용 이유)
-		return transfer(amount, to.owner);
+		return transfer(amount, to.getOwner());
 	}
 }
