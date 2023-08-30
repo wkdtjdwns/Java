@@ -34,7 +34,7 @@ public class BankDriver {
 //		System.out.println(a1.balance);
 		
 		// ★두 객체의 관계 설정 (상호작용)★
-		p1.setBankAccount(a1);
+		p1.setAccount(a1);
 		a1.setOwner(p1);
 		
 		// 테스트 (ooo님의 계좌 잔액은 ooo원 입니다.)
@@ -75,19 +75,19 @@ public class BankDriver {
 		a2.setBalance(50000);
 		
 		// 두 객체 상호작용
-		p2.setBankAccount(a2);
+		p2.setAccount(a2);
 		a2.setOwner(p2);
 
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(15000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(90000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getAccount().getBalance() + "원 입니다.");
 		
 		a1.transfer(-20000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getAccount().getBalance() + "원 입니다.");
 		
 		System.out.println();
 		p1.setCashAmount(30000);
@@ -107,10 +107,17 @@ public class BankDriver {
 		
 		// 이체 3 메소드 테스트
 		p1.transfer(20000, p2);
-		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getBankAccount().getBalance() + "원 입니다.");
+		System.out.println(p2.getName() + "님의 계좌 잔액은 " + p2.getAccount().getBalance() + "원 입니다.");
 		
 		// 이체 4 메소드 테스트
 		p2.transfer(20000, a1);
 		System.out.println(a1.getOwner().getName() + "통장의 계좌 잔액은 " + a1.getBalance() + "원 입니다.");
+		
+		// 인스턴스화를 할 때 파라미터로 있는 변수값을 할당 할 수 있음
+		Person p3 = new Person("홍길순");
+		System.out.println(p3.getName());
+		
+		Person p4 = new Person("임꺽정", 50);
+		System.out.println(p4.getName() + ", " + p4.getAge());
 	}
 }
