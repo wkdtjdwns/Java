@@ -91,6 +91,7 @@ public class BankAccount {
 //		return true;
 //	}
 
+	// 위와 같이 코드를 다시 쓰는 것보단 위에 있는 deposit() 메소드를 가져오는 것이 훨씬 편하고 좋음 (객체지향언어의 재활용성)
 	boolean depositWithExchangeRate(double amount, double exchangeRate)
 	{
 		return deposit((int)(amount*exchangeRate));
@@ -136,7 +137,7 @@ public class BankAccount {
 		balance -= amount;
 		
 		// 이체 대상의 통장 잔액 -> +
-		to.getBankAccount().balance += amount;
+		to.getAccount().balance += amount;
 		
 		System.out.println(owner.getName() + "님이 " + to.getName() + "님에게 " + amount + "원 이체하였습니다. 통장 잔고 : " + balance + "원, 현금 : " + owner.getCashAmount());
 		
