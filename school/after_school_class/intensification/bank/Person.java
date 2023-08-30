@@ -19,69 +19,90 @@ public class Person {
 	// 계좌 -> 계좌를 구성하기 위해선 BankAccount 클래스에 있는 필드값이 필요함
 	private BankAccount account; // 계좌 정보 (account -> BankAccount 클래스에 있는 잔액의 정보를 가짐)
 	
-	// 접근제어자가 private인 변수를 다른 클래스에서 사용할 수 있도록 public 메서드를 하나 만듬
-	public void setName(String newName)
+	// 생성자란? :생성자는 이름이 클래스와 동일한 메소드임
+
+	// 생성자의 역할
+	// - 인스턴스를 생성함
+	// - 인스턴스의 속성 (인스턴스 변수 -> 클래스의 필드값)의 초기화
+
+	// 기본 생성자 (빈 생성자 -> 파라미터, 메소드 등이 하나도 없음) : 생성자를 한 개도 정의하지 않으면 java에서 자동으로 기본 생성자를 제공해줌
+	// - 생성자를 하나라도 정의하면 기본 생성자는 사용자는 자동으로 생성되지 않음 -> 기본 생성자를 자신이 직접 정의해줘야함
+	
+	// 생성자도 오버로딩이 가능함 - 생성자도 메소드이기 때문
+	// 기본 생성자 : 파라미터, 메소드 등이 단 한개도 없는 메소드
+	public Person()
 	{
-		name = newName;
+		
 	}
 	
-	public String getName()
+	// 인스턴스화를 할 때 파라미터로 있는 변수값을 할당 할 수 있음
+//	public Person(String newName)
+//	{
+//		name = newName;
+//	}
+//	
+//	public Person(String newName, int newAge)
+//	{
+//		name = newName;
+//		
+//		if (newAge >= 0)
+//		{
+//			age = newAge;	
+//		}
+//	}
+	
+	// this를 사용했을 때 : 현재 필드의 변수명과 파라미터의 변수명을 구분할 수 있게 함
+	public Person(String name)
 	{
+		this.name = name;
+	}
+	
+	public Person(String name, int age)
+	{
+		this.name = name;
+		
+		if (age >= 0)
+		{
+			this.age = age;	
+		}
+	}
+	
+	
+	
+	
+	public String getName() {
 		return name;
 	}
-	
-	public void setCashAmount(int newCashAmount)
-	{
-		if (newCashAmount > 0)
-		{
-			cashAmount = newCashAmount;
-		}
-		
-		else
-		{
-			System.out.println("올바른 수량를 입력하세요.");
-		}
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public int getCashAmount()
-	{
-		return cashAmount;
-	}
-	
-	public void setAge(int newAge) // 파라미터로 나이를 받아와서 계산함
-	{
-		if (newAge > 0) // 파라미터로 올바른 나이를 받아왔다면
-		{
-			// 해당 클래스의 private의 age라는 변수 값을 받아온 나이로 만들어서 저장시켜줌
-			age = newAge;
-		}
-		
-		else
-		{
-			System.out.println("올바른 나이를 입력하세요.");
-		}
-	}
-	
-	// 나이를 얻기 위한 메소드
-	public int getAge()
-	{
-		// 위에 있는 메소드로 정해놓은 나이를 리턴시킴
+
+	public int getAge() {
 		return age;
 	}
-	
-	public void setBankAccount(BankAccount newBankAccount)
-	{
-		account = newBankAccount;
+
+	public void setAge(int age) {
+		if (age >= 0)
+			this.age = age;
 	}
-	
-	// 나이를 얻기 위한 메소드
-	public BankAccount getBankAccount()
-	{
-		// 위에 있는 메소드로 정해놓은 나이를 리턴시킴
+
+	public int getCashAmount() {
+		return cashAmount;
+	}
+
+	public void setCashAmount(int cashAmount) {
+		this.cashAmount = cashAmount;
+	}
+
+	public BankAccount getAccount() {
 		return account;
 	}
-	
-	
+
+	public void setAccount(BankAccount account) {
+		this.account = account;
+	}
+
 	// 이체 (파라미터 : 이체할 금액 -> 정수 = int, 이체할 대상 -> Person) - transfer
 	// 리턴 : 이체성공여부 (불리언)
 	boolean transfer(int amount, Person to)
