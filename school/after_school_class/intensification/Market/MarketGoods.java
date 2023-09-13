@@ -2,64 +2,76 @@ package classExam;
 
 // 마켓에 있는 제품들
 public class MarketGoods {
-    /*
-        복습 문제
-
-        - 인스턴스 변수 (필드) - 접근제한자는 전부 private로 설정함
-            1. String name -> 상품 이름
-            2. in retailPrice -> 상품의 출시 가격
-            3. int discountRate -> 상품의 할인율
-
-        - 생성자 (값을 지정해주도록 함)
-            1. 세 개의 파라미터를 받는 생성자
-            2. name, retailPrice 2개의 파라미터를 받는 생성자
-
-        - Getter / Setter 메소드
-            1. name, retailPrice는 getter 메소드만, discountRate는 getter와 setter 모두 작성함
-
-        - getDiscountRate() 메소드
-            - 할인가를 리턴하는 메소드임
-            - 예) retailPrice = 10000, discountRate = 20일 때 8000을 리턴함
-     */
-
     // 인스턴스 변수 (필드)
-    private String name;
-    private int retailPrice;
 
+    // 상수를 사용하는 경우
+    // - 절대 바뀌면 안 되는 값일 때 ex) pi(3.14...), 게임 캐릭터의 기본 능력치 등등
+    // - 바뀌지 않는 값이면서 접근은 자주 해야하는 값일 때
+    
+    /* 이름과 출시 가격은 바꾸지 않을 것이기 때문에 final, 즉 상수로 두어서 그 누구도 바꾸지 못하게 함
+    상수로 두게 된다면 누군가가 접근을 하더라도 바꾸지 못하기 때문에 접근 제한자를 public으로 바꾸어도 됨
+    접근 제한자가 public이라면 getter를 굳이 사용할 필요가 없음 */
+    public final String name;
+    public final int retailPrice;
     private int discountRate;
-
 
     // 생성자
     public MarketGoods(String newName, int newRetailPrice, int newDiscountRate)
     {
         this.name = newName;
-        this.retailPrice = newRetailPrice;
-        this.discountRate = newRetailPrice;
+
+        if (newRetailPrice < 0)
+        {
+            this.retailPrice = 0;
+        }
+
+        else
+        {
+            this.retailPrice = newRetailPrice;
+        }
+
+        if (newDiscountRate < 0 || newDiscountRate > 100)
+        {
+            this.discountRate = 0;
+        }
+
+        else
+        {
+            this.discountRate = newDiscountRate;
+        }
     }
 
     public MarketGoods(String newName, int newRetailPrice)
     {
         this.name = newName;
-        this.retailPrice = newRetailPrice;
-    }
 
+        if (newRetailPrice < 0)
+        {
+            this.retailPrice = 0;
+        }
+
+        else
+        {
+            this.retailPrice = newRetailPrice;
+        }
+    }
 
     // getter / setter
-    public String getName()
-    {
-        return name;
-    }
-
-    public int getRetailPrice()
-    {
-        return retailPrice;
-    }
+//    public String getName()
+//    {
+//        return name;
+//    }
+//
+//    public int getRetailPrice()
+//    {
+//        return retailPrice;
+//    }
 
     public void setDiscountRate(int newDiscountRate)
     {
-        if (discountRate < 0)
+        if (newDiscountRate < 0 || newDiscountRate > 100)
         {
-            System.out.println("제대로 된 값을 입력하시오.");
+            this.discountRate = 0;
             return;
         }
 
@@ -68,7 +80,12 @@ public class MarketGoods {
 
     public int getDiscountRate()
     {
-        return retailPrice * (100 - discountRate) / 100;
+        return discountRate;
     }
 
+
+    public int getDiscountPrice()
+    {
+        return retailPrice * (100 - discountRate) / 100;
+    }
 }
