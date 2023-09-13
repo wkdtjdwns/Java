@@ -6,13 +6,19 @@ public class MarketMain {
     public static void main(String[] args) {
         // 복습 문제 테스트
         
-        // 인스턴스화 및 값 할당
-        MarketGoods item1 = new MarketGoods("김규민", 10000, 20);
-        MarketGoods item2 = new MarketGoods("돼지", 25000);
-        item1.setDiscountRate(20);
+        // 생성자를 통해 인스턴스화 및 인스턴스 변수 값의 초기화
+        MarketGoods g1 = new MarketGoods("Macbook Air", 1950000);
+        MarketGoods g2 = new MarketGoods("Macbook Pro", 2950000, 15);
+        MarketGoods g3 = new MarketGoods("iPhone14", 920000, 20);
 
         // 테스트
-        System.out.println("이름 = " + item1.getName() + " 출시가격 = " + item1.getRetailPrice() + " 할인가 = " + item1.getDiscountRate());
-        System.out.println("이름 = " + item2.getName() + " 출시가격 = " + item2.getRetailPrice());
+        System.out.println("제품명 " + g1.name + "의 할인율 : " + g1.getDiscountRate() + "%");
+        System.out.println("제품명 " + g2.name + "의 할인율 : " + g2.getDiscountRate() + "%");
+        System.out.println("제품명 " + g3.name + "의 할인율 : " + g3.getDiscountRate() + "%");
+        System.out.println(g3.name +"의 정상가격 : " + g3.retailPrice + "원");
+        System.out.println(g3.name +"의 할인가격 : " + g3.getDiscountPrice() + "원");
+        System.out.println("경쟁 업체가 많아져서 " + g3.name + "의 할인율이 35%로 올랐습니다.");
+        g3.setDiscountRate(35);
+        System.out.println(g3.name +"의 할인가격 : " + g3.getDiscountPrice() + "원");
     }
 }
