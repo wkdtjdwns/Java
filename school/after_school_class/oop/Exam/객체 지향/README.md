@@ -1,2 +1,0 @@
-- MusicPlayerMain1 -> 함수를 이용하지 않은 코드
-- MusicPlayerMain2 -> 함수를 이용한 데이터 재활용
