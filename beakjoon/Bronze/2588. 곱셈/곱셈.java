@@ -1,17 +1,6 @@
-package _01_입출력과사칙연산;
-
-// 세자리 수 곱셈
-// 과정도 출력
-
-// 입력		출력
-// 472      2360
-// 385		3776
-//			1416
-// 			181720
-
 import java.util.Scanner;
 
-public class _10_곱셈 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
