@@ -15,26 +15,26 @@
 - 정보보호학부 소속 동아리
     - **MatKor**
         
-        https://upload.acmicpc.net/94f2bdde-bb90-4677-a8ed-afbd994590d6/-/crop/1120x429/0,0/-/preview/
-        
+        ![image](https://github.com/wkdtjdwns/Java/assets/128266768/f1ac6773-c6fe-4442-80a6-c9bd2e4b5651)
+
     - **WiCys**
         
-        https://upload.acmicpc.net/a17b9acf-3278-41f4-9cf9-7a01867e7b9d/-/crop/1107x367/0,0/-/preview/
-        
+        ![image](https://github.com/wkdtjdwns/Java/assets/128266768/9e9621d4-baff-4d37-81c4-a0a38b155801)
+
 - 사이버국방학과 소속 동아리
     - **CyKor**
         
-        https://upload.acmicpc.net/0a2106e2-c31d-4eca-a2de-bc64b628b457/-/preview/
-        
+        ![image](https://github.com/wkdtjdwns/Java/assets/128266768/2cd97086-2043-4ecf-b747-da09e471e78e)
+
     - **AlKor**
         
-        https://upload.acmicpc.net/f67d87fa-3e8b-4cdd-84c3-c8602a91e795/-/crop/1118x298/0,0/-/preview/
-        
+        ![image](https://github.com/wkdtjdwns/Java/assets/128266768/016a5fa0-b69f-456d-83d0-ff1192ff88ee)
+
 - 스마트보안학과 소속 동아리
     - **$clear**
         
-        https://upload.acmicpc.net/a18d2cdc-cd08-4852-8e6f-87c9a3bbba5f/-/crop/1127x305/0,0/-/preview/
-        
+        ![image](https://github.com/wkdtjdwns/Java/assets/128266768/c7e1cc56-b3ef-4cbe-8c38-fff9cda1cf46)
+
 
 올해 1학기, 23학번 새내기로 입학한 민재는 이렇게 많은 동아리를 보고 감탄하며 가입하고자 하는 동아리를 정했다. 실제로는 모든 동아리에 중복으로 가입할 수 있지만, 아직 새내기였던 민재는 그 사실을 모른 채 하나의 동아리만 가입해야 하는지 알고, 마음속으로 하나를 정했다. 그러던 중 선배인 주영이와 밥약(선배가 후배에게 밥을 사주는 고대의 문화)을 하다가 동아리 얘기가 나왔고, 주영이는 민재에게 어떤 동아리에 가입하고 싶은지 물어보았다.
 
