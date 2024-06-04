@@ -53,6 +53,8 @@
 
 - Object[] 배열을 만들면 세상의 모든 객체를 담을 수 있는 배열을 생성할 수 있음.
 
+![image](https://github.com/wkdtjdwns/Java/assets/128266768/95b01397-a271-4824-af96-00772a89ed3e)
+
 # Object가 없다면?
 
 - `void action(Object obj)`과 같이 모든 객체를 받을 수 있는 메서드를 만들 수 없음.
