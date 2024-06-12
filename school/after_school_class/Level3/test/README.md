@@ -4,7 +4,7 @@
 - **인터페이스에는 정수형 배열을 인수로 받아서 오름차순으로 정렬하는 ascending() 메서드와 내림차순으로 정렬하는 descending() 메서드가 있다.**
 - **알고리즘에 대한 설명을 출력하는 description() 메서드도 존재한다.**
     
-    이미지
+    ![image](https://github.com/wkdtjdwns/Java/assets/128266768/98ad2482-6d75-44db-b03b-3831295bc958)
     
     ---
     
