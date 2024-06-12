@@ -27,3 +27,22 @@ User b = new User("id-100"); // 참조: x002
 
 - 위의 경우는 **물리적으로 다른 메모리에 있는 객체**이지만, **회원 번호를 기준으로 생각해보면 논리적으로 같은 회원**으로 볼 수 있음.
 - 따라서 **동일성은 false**, **동등성은 true**임.
+
+## 동일성 비교
+
+- **user1 == user2**
+- **x001 == x002 = false**
+    
+## Obejct.eqauls() 메서드
+
+```java
+public boolean eqauls(Object obj) {
+        return (this == obj);
+}
+```
+
+## 동등성 비교
+
+- **user1.eqauls(user2)**
+- **return (user1 == user2)**
+- **return (x001 == x002) = false**
