@@ -47,6 +47,13 @@ public boolean eqauls(Object obj) {
 - **return (user1 == user2)**
 - **return (x001 == x002) = false**
 
+# Object의 나머지 메서드
+
+- `clone()` → 객체를 복사할 때 사용함. (잘 사용하지는 않음.)
+- `hashCode()` → `equals()`와 `hashCode()`는 종종 함께 사용됨. → 컬렉션 프레임워크 때 다룸.
+- `getClass()` → Class를 다룰 때 설명함.
+- `notify()`, `notifyAll()`, `wait()` → 멀티 쓰레드 용 메서드 → 멀티 쓰레드에서 설명함.
+
 # equals() 메서드를 구현할 때 지켜야 하는 규칙
 
 - **반사성**: 객체는 자기 자신과 동등해야 함. (`x.equals(x)`는 항상 true여야 함.)
