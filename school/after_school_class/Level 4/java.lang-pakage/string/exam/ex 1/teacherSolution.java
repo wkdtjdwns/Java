@@ -2,7 +2,7 @@ package lang.string.Ex;
 
 import java.util.Scanner;
 
-public class Ex1 {
+public class TeacherEx1 {
 
     public static void main(String[] args) {
 
