@@ -23,9 +23,9 @@ public class Ex2 {
         }
 
         int cnt = 0;
-        for (int i = 0; i < alpha.length; i++) {
-            if (alpha[i] != 0) {
-                cnt += Math.abs(alpha[i]);
+        for (int n : alpha) {
+            if (n  != 0) {
+                cnt += Math.abs(n );
             }
         }
 
