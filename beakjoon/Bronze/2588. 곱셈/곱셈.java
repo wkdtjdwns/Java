@@ -1,18 +1,18 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		
-		// 연산자 사용
-		int A = in.nextInt();
-		int B = in.nextInt();
-		
-		System.out.println(A * (B % 10)); // A * (B를 10으로 나눈 나머지 => B의 1의 자리)
-		System.out.println(A * (B % 100 / 10)); // A * (B를 100으로 나눈 나머지(100의 자리) 나누기 10 => B의 10의 자리)
-		System.out.println(A * (B / 100)); // A * (B를 100으로 나눈 값 => B의 100의 자리)
-		System.out.println(A * B);
-		
-		in.close();
-	}
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+
+        System.out.println(a * (b % 10));
+        System.out.println(a * ((b % 100) / 10));
+        System.out.println(a * (b / 100));
+        System.out.println(a * b);
+    }
 }
