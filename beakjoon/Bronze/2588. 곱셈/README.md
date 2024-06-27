@@ -8,7 +8,7 @@
 
 (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.
 
-![image](https://github.com/wkdtjdwns/Java/assets/128266768/fb6676e1-1e5c-4d3f-9167-e158a8339b30)
+![image](https://github.com/wkdtjdwns/Java/assets/128266768/4647dc55-ed4f-4327-b8de-0cab7176a104)
 
 (1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.
 
