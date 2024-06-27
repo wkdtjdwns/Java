@@ -19,15 +19,12 @@ public class Me {
             listen.add(br.readLine());
         }
 
-        HashSet<String> see = new HashSet<>();
-        for (int i = 0; i < m; i++) {
-            see.add(br.readLine());
-        }
-
         int cnt = 0;
         ArrayList<String> ls = new ArrayList<>();
-        for (String name : listen) {
-            if (see.contains(name)) {
+        for (int i = 0; i < m; i++) {
+            String name = br.readLine();
+
+            if (listen.contains(name)) {
                 cnt++;
                 ls.add(name);
             }
