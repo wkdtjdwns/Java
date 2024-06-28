@@ -8,7 +8,7 @@
 
 n번째 삼각수, T(n)은 1부터 n까지의 합이다. T(n) = 1 + ... + n. 이것은 삼각형 모양으로 표현할 수 있다. 아래 그림은 T(4)를 나타낸 것이다.
 
-![image](https://www.acmicpc.net/upload/images/tsum.png)
+![image](https://github.com/wkdtjdwns/Java/assets/128266768/0500b8ed-2842-407d-93e6-1de8dfcd7dc4)
 
 다음과 같은 식을 통해 가중치를 부여한 삼각수의 합을 구할 수 있다.
 
