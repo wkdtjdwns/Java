@@ -35,3 +35,44 @@
 - **Enumeration은 일련의 명명된 상수들의 집합을 정의하는 것을 의미하며, 프로그래밍에서는 이러한 상수들을 사용하여 코드 내에서 미리 정의된 값들의 집합을 나타냄.**
 - **쉽게 이야기해서 회원의 등급은 상수로 정의한 BASIC, GOLD, DIAMOND만 사용할 수 있다는 뜻임.**
 - **자바의 `enum`은 타입 안전성을 제공하고, 코드의 가독성을 높이며, 예상 가능한 값들의 집합을 표현하는 데 사용됨.**
+  
+    ---
+    
+    ```java
+    package enumeration.ex3;
+    
+    public class EnumRefMain {
+    
+        public static void main(String[] args) {
+            System.out.println("class BASIC = " + Grade.BASIC.getClass());
+            System.out.println("class GOLD = " + Grade.GOLD.getClass());
+            System.out.println("class DIAMOND = " + Grade.DIAMOND.getClass());
+    
+            /*class BASIC = class enumeration.ex3.Grade
+            class GOLD = class enumeration.ex3.Grade
+            class DIAMOND = class enumeration.ex3.Grade*/
+            
+            System.out.println("ref BASIC = " + refValue(Grade.BASIC));
+            System.out.println("ref GOLD = " + refValue(Grade.GOLD));
+            System.out.println("ref DIAMOND = " + refValue(Grade.DIAMOND));
+            
+            /*ref BASIC = 4e50df2e
+            ref GOLD = 1d81eb93
+            ref DIAMOND = 7291c18f*/
+        }
+    
+        // 다형성 활용
+        private static String refValue(Object grade) {
+            // System.identityHashCode(): 자바가 관리하는 객체의 참조값을 주소로 줌.
+            // Integer.toHexString(): 숫자를 16진수로 바꿔줌. (일반적으로 확인하는 참조값: 16진수)
+            return Integer.toHexString(System.identityHashCode(grade));
+        }
+    }
+    ```
+    
+    ---
+    
+    - **위의 실행 결과를 보면 상수들이 열거형으로 선언한 타입인 Grade 타입을 사용하는 것을 볼 수 있음.**
+    - **그리고 각각의 인스턴스도 서로 다른 것을 확인할 수 있음.**
+    - **참고로 열거형은 `toString()`을 오버라이딩 하기 때문에 참조값을 확인할 수 없어서 참조값을 확인하기 위해 `refVale()`를 생성했음.**
+    - **열거형도 클래스임. 열거형을 제공하기 위해 제약이 추가된 클래스라 생각하면 편함.**
