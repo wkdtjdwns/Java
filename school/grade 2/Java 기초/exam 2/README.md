@@ -5,6 +5,9 @@
 <br>
 
 ## 출력
+cnt : 1 sum : 1<br>
+cnt : 2 sum : 3<br>
+cnt : 3 sum : 6<br>
 cnt : 4 sum : 10<br>
 cnt : 5 sum : 15<br>
 cnt : 6 sum : 21<br>
