@@ -5,6 +5,8 @@
 <br>
 
 ## 출력
+cnt : 1 odd : 1 even : 0 sum : 1<br>
+cnt : 2 odd : 1 even : 2 sum : 3<br>
 cnt : 3 odd : 4 even : 2 sum : 6<br>
 cnt : 4 odd : 4 even : 6 sum : 10<br>
 cnt : 5 odd : 9 even : 6 sum : 15<br>
