@@ -1,21 +1,19 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(br.readLine());
         int left = 1; int leftMax;
         int right = 1; int rightMax;
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
             a[i] = Integer.parseInt(br.readLine());
         }
-        
+
         leftMax = a[0];
         rightMax = a[n - 1];
 
