@@ -23,6 +23,6 @@ public class Main {
             }
         }
 
-        System.out.println(result ? "YES" : "NO");
+        System.out.println(result ? "YES" : "NO"); 
     }
 }
