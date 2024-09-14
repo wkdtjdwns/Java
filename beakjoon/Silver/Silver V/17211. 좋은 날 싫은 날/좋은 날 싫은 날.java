@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -10,15 +9,26 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
-        double m = Double.parseDouble(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+        
+        double a = (m == 0) ? 1.0 : 0.0;
+        double b = (m == 1) ? 1.0 : 0.0;
 
-        double[] arr = Arrays.stream(br.readLine().split(" ")).mapToDouble(Double::parseDouble).toArray();
-        m = (m - 1) * 1000;
+        st = new StringTokenizer(br.readLine());
+        double c = Double.parseDouble(st.nextToken());
+        double d = Double.parseDouble(st.nextToken());
+        double e = Double.parseDouble(st.nextToken());
+        double f = Double.parseDouble(st.nextToken());
+
+
         for (int i = 0; i < n; i++) {
-            m = m * arr[0] + (1000 - m) * arr[2];
+            double tempA = a * c + b * e;
+            double tempB = a * d + b * f;
+            a = tempA;
+            b = tempB;
         }
 
-        System.out.println(String.format("%.0f", m));
-        System.out.println(String.format("%.0f", 1000 - m));
+        System.out.println(Math.round(a * 1000));
+        System.out.println(Math.round(b * 1000));
     }
 }
