@@ -14,3 +14,12 @@ public class Ex8_1 {
 		System.out.println(5 + " try블럭문 끝~~");
 	}
 }
+
+/*
+실행 결과
+----------------
+1 try블럭문 전
+2 try블럭문
+3 try블럭문
+5 try블럭문 끝~~
+*/
