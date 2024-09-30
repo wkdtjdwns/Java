@@ -1,25 +1,35 @@
 package ch08;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex8_5v3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int n1 = 0, n2 = 0, result = 0;
 		
 		System.out.print("1. 숫자를 입력하세요 >>> ");
-		int n1 = sc.nextInt();
+		try {
+			n1 = sc.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("1. 입력형식 예외 발생");
+			e.printStackTrace();
+		}
 		
 		System.out.print("2. 숫자를 입력하세요 >>> ");
-		int n2 = sc.nextInt();
-
-		int result;
+		try {
+			n2 = sc.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("2. 입력형식 예외 발생");
+			e.printStackTrace();
+		}
+		
 		try {
 			result = n1 / n2;
 		} catch (ArithmeticException ae) {
 			System.out.println("3. 0으로 나눌 수 없음.");
 			ae.printStackTrace();
-			result = 0;
 		}
 		
 		System.out.printf("%d/%d=%d", n1, n2, result);
