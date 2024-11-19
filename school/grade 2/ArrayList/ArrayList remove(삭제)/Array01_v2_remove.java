@@ -56,6 +56,15 @@ public class Array01_v2_remove {
 		list.remove(2); // 인덱스에 없는 데이터 삭제시 메세지 확인 -> list.remove(5);
 		System.out.println("Array		삭제 후: " + Arrays.toString(array));
 		System.out.println("ArrayList	삭제 후: " + list); // ArrayList 전체 출력
+		
+		// 모든 데이터 삭제 : 명.clear()
+		for (int i = 0; i < array.length; i++) {
+			array[i] = "";
+		}
+		
+		list.clear();
+		System.out.println("Array     전체 삭제 후: " + Arrays.toString(array));
+		System.out.println("ArrayList 전체 삭제 후: " + list); // ArrayList 전체 출력
 	}
 }
 
@@ -77,4 +86,6 @@ public class Array01_v2_remove {
  * --------------------------------------------
  * Array		삭제 후: [One, Two, , Four, null, null, null, null, null, null]
  * ArrayList	삭제 후: [One, Two, four]
+ * Array     전체 삭제 후: [, , , , , , , , , ]
+ * ArrayList 전체 삭제 후: []
  */
